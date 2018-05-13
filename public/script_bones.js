@@ -190,11 +190,6 @@ function update() {
     orbit.update();
 }
 
-function _update() {
-    const bones = mesh.skeleton.bones;
-    bones[1].rotation.y = (Math.PI * 1) / 8;
-    bones[2].rotation.x = (Math.PI * 1) / 4;
-}
 
 function render() {
     renderer.render(scene, camera);
@@ -202,7 +197,6 @@ function render() {
 
 function tick() {
     update();
-    //_update();
     render();
     requestAnimationFrame(tick);
 }
